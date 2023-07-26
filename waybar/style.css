@@ -1,0 +1,67 @@
+* {
+  	font-size: 11px;
+  	font-family: monospace;
+}
+window#waybar {
+  	background: #000000;
+  	color: #f2eccf;
+  	min-height: 0;
+}
+#tray,
+#network,
+#custom-torrent-status,
+#workspaces {
+  	background: #151517;
+  	border-top: 2px solid #000000;
+  	border-bottom: 2px solid #000000;
+}
+#memory.warning {
+	color: #b2872f;
+}
+#workspaces {
+  	padding: 0;
+  	margin-right: 6px;
+}
+#workspaces button {
+  	padding: 0 6px;
+  	color: #fcf8e2;
+  	border-radius: 0;
+  	border: 1px solid rgba(0, 0, 0, 0);
+}
+#workspaces button.visible {
+  	color:  #5b8277;
+  	border-color: #5b8277;
+}
+#workspaces button.focused {
+  	color:  #000000;
+  	border-color: #5b8277;
+  	background: #5b8277;
+}
+#workspaces button:hover {
+  	border: 1px solid #5b8277;
+}
+#mpd,
+#tray,
+#clock,
+#memory,
+#battery,
+#network,
+#backlight,
+#pulseaudio,
+#temperature,
+#custom-weather,
+#custom-swaykbd,
+#custom-ds4battery,
+#custom-rec-status,
+#custom-pac-status,
+#custom-mail-status,
+#custom-news-status,
+#custom-waybar-mpris,
+#custom-batwatt,
+#custom-torrent-status {
+	color: #fcf8e2;
+  	padding: 0 6px;
+}
+#custom-weather {
+  	color: #5b8277;
+}

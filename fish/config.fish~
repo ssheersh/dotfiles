@@ -1,0 +1,6 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+	alias ls="ls -l -h -a"
+	alias mkdir="mkdir -p"
+	alias df="df -h"		
+end

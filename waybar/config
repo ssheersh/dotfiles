@@ -1,0 +1,234 @@
+// vim: filetype=json
+{
+    "layer": "bottom",
+    "height": 30,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "custom/waybar-mpris",
+        "pulseaudio"
+    ],
+    "modules-center": [
+        "clock",
+        "custom/weather"
+    ],
+    "modules-right": [
+        "custom/rec-status",
+        "custom/swaykbd",
+        "custom/ds4battery",
+        "custom/mail-status",
+        "custom/pac-status",
+        "custom/news-status",
+        "memory",
+        "backlight",
+        "battery#bat0",
+        "battery#bat1",
+        "custom/batwatt",
+        "custom/torrent-status",
+        "network",
+        "tray"
+    ],
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "custom/waybar-mpris": {
+    	"return-type": "json",
+    	"exec": "waybar-mpris --autofocus --text-format=\"%i [%p] %a - %t\" --tooltip-format=\"%t by %a from %A\n%p/%d\n(%P)\" --pause='<span color=\"#5b8277\"></span>' --play='' --max-title 45",
+    	"on-click": "lmc toggle",
+    	"on-click-right": "lmc next"
+    },
+    "mpd": {
+        "format": " {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} [{elapsedTime:%M:%S}] {artist} - {title}",
+        "format-disconnected": " Connection lost ",
+        "format-stopped": "  {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} [--:--] -- - --",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "max-length": 60,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "on": ""
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "[s]"
+        },
+        "state-icons": {
+            "paused": "<span color=\"#b2872f\"></span>",
+            "playing": "<span color=\"#5b8277\"></span>"
+        },
+        "tooltip-format": "MPD now playing: {artist} - {title}",
+        "tooltip-format-disconnected": "MPD disconnected"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d  %H:%M:%S}",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "<span color=\"#5b8277\"></span> {used:0.3f}G",
+        "states": {
+        	"warning": 90
+        },
+        "interval": 10
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "<span color=\"#5b8277\">{icon}</span> {percent}%",
+        "format-icons": ["", ""]
+    },
+    "battery#bat0": {
+        "bat": "BAT0",
+        "format": "{icon} {capacity}%",
+        "format-charging": " <span color=\"#5b8277\"></span> {capacity}%",
+        "format-plugged": "<span color=\"#5b8277\"></span> {capacity}%",
+        "format-icons": [
+            "<span color=\"#b73030\"></span>",
+            "<span color=\"#b2872f\"></span>",
+            "<span color=\"#5b8277\"></span>",
+            "<span color=\"#5b8277\"></span>",
+            "<span color=\"#5b8277\"></span>"
+        ]
+    },
+    "battery#bat1": {
+        "bat": "BAT1",
+        "format": "{icon} {capacity}%",
+        "format-charging": " <span color=\"#5b8277\"></span> {capacity}%",
+        "format-plugged": "<span color=\"#5b8277\"></span> {capacity}%",
+        "format-icons": [
+            "<span color=\"#b73030\"></span>",
+            "<span color=\"#b2872f\"></span>",
+            "<span color=\"#5b8277\"></span>",
+            "<span color=\"#5b8277\"></span>",
+            "<span color=\"#5b8277\"></span>"
+        ]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "<span color=\"#5b8277\"></span> {essid}",
+        "format-ethernet": "<span color=\"#5b8277\"></span> {ifname}",
+        "format-linked": "<span color=\"#5b8277\"></span> {ifname}",
+        "format-disconnected": "<span color=\"#5b8277\">⚠</span> Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "custom/left-arrow-cyan": {
+        "format": ""
+    },
+    "custom/right-arrow-cyan": {
+        "format": ""
+    },
+    "custom/left-arrow-gray": {
+        "format": ""
+    },
+    "custom/left-arrow-black": {
+        "format": ""
+    },
+    "custom/right-arrow-black": {
+        "format": ""
+    },
+    "custom/left-decorator-black": {
+        "format": ""
+    },
+    "custom/right-decorator-black": {
+        "format": ""
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "<span color=\"#5b8277\">{icon}</span> {volume}%",
+        "format-bluetooth": "<span color=\"#5b8277\">{icon}</span> {volume}% {format_source}",
+        "format-muted": "<span color=\"#b2872f\"></span>",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "$TERMINAL -e ncpamixer"
+    },
+    "custom/rec-status": {
+        "format": "<span color=\"#5b8277\">{}</span>",
+        "signal": 5,
+        "interval": "once",
+        "exec": "barrecstatus"
+    },
+    "custom/torrent-status": {
+        "format": "<span color=\"#5b8277\">{}</span>",
+        "signal": 10,
+        "interval": "once",
+        "exec": "bartorrentstatus"
+    },
+    "custom/mail-status": {
+        "format": "<span color=\"#5b8277\">📧</span> {}",
+        "signal": 9,
+        "interval": "once",
+        "exec": "barmailstatus",
+        "tooltip": false
+    },
+    "custom/pac-status": {
+        "format": "<span color=\"#5b8277\"></span> {}",
+        "signal": 7,
+        "interval": "once",
+        "exec": "barpacstatus"
+    },
+    "custom/news-status": {
+        "format": "<span color=\"#5b8277\"></span> {}",
+        "signal": 8,
+        "interval": "once",
+        "exec": "barnewsstatus",
+        "tooltip": false
+    },
+    "custom/weather": {
+        "format": "{}",
+        "interval": 180,
+        "exec": "barweather"
+    },
+    "custom/ds4battery": {
+        "format": "🎮 {}",
+        "interval": 180,
+        "exec": "bards4battery"
+    },
+    "custom/batwatt": {
+    	"return-type": "json",
+        "interval": 10,
+        "exec-if": "test -e /sys/class/power_supply/BAT0",
+        "exec": "barbatwatt",
+        "exec-on-event": true,
+        "on-click": ""
+    },
+    "custom/swaykbd": {
+        "format": "{}",
+        "exec": "swaykbd",
+        "tooltip": false
+    }
+}
