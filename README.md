@@ -1,5 +1,6 @@
 # dotfiles
 ![Last commit](https://img.shields.io/github/last-commit/ssheersh/dotfiles)
+
 A collection of config files for my Linux system. 
 
 ## Current Config: (*btw, I use Arch*)
