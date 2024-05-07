@@ -1,0 +1,33 @@
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+use { "catppuccin/nvim", as = "catppuccin" }
+
+  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use('nvim-treesitter/playground')
+  use('mbbill/undotree')
+  use ('tpope/vim-fugitive')
+    {                                      -- Optional
+      'williamboman/mason.nvim',
+      run = function()
+        pcall(vim.cmd, 'MasonUpdate')
+      end,
+    },
+    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+    -- Autocompletion
+    {'hrsh7th/nvim-cmp'},     -- Required
+    {'hrsh7th/cmp-nvim-lsp'}, -- Required
+  }
+}
+
+ use{
+    "nvim-neorg/neorg",
+  --  config = function ()
+  --      require("neorg").setup{}
+  --  end
+
+ }
+
+
+
+end)
