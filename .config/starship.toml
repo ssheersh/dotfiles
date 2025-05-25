@@ -9,6 +9,9 @@ $character
 [directory]
 style = "bold blue"
 
+[git_status]
+disabled = false
+
 [git_branch]
 symbol = "🌱 "
 
