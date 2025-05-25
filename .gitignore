@@ -1,0 +1,29 @@
+# Ignore everything by default
+*
+
+# Whitelist this gitignore so Git doesn't ignore itself
+!.gitignore
+
+# Whitelist select home-level dotfiles
+!.bashrc
+!README.md
+
+# Whitelist the .config directory itself (so we can specify inside it)
+!.config/
+
+# Ignore everything inside .config by default
+.config/*
+
+# Whitelist only these specific config folders/files
+!.config/fish/
+!.config/fish/**
+!.config/nvim/
+!.config/nvim/**
+!.config/kitty/
+!.config/kitty/**
+!.config/hypr/
+!.config/hypr/**
+!.config/systemd/
+!.config/systemd/**
+!.config/starship.toml
+
