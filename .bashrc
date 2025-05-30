@@ -25,6 +25,7 @@ alias df="df -h"
 alias cat="bat"
 alias grep="rg"
 alias vim="nvim"
+alias vi="nvim"
 alias gvim="nvim"
 alias Vim="vim"
 alias :q="exit"
@@ -57,6 +58,16 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 if [ -f /home/ssheersh/anaconda3/etc/profile.d/conda.sh ]; then
     . /home/ssheersh/anaconda3/etc/profile.d/conda.sh
 fi
+
+man() {
+  if [[ "$1" == "-d" ]]; then
+    shift
+    command man "$@"
+  else
+    tldr "$@"
+  fi
+}
+
 
 # 🌌 Starship prompt, because style matters
 eval "$(starship init bash)"

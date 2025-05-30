@@ -7,6 +7,7 @@
 # Whitelist select home-level dotfiles
 !.bashrc
 !README.md
+!.tmux.conf
 
 # Whitelist the .config directory itself (so we can specify inside it)
 !.config/

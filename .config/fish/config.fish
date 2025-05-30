@@ -23,6 +23,7 @@ if status is-interactive
 	alias cat="bat"
 	alias grep="rg"
 	alias vim="nvim"
+	alias vi="nvim"
 	alias gvim="nvim"
 	alias Vim="vim"  # fallback if needed
 	alias :q="exit"
