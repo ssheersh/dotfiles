@@ -42,6 +42,10 @@ if status is-interactive
 	alias clone="git clone"
 	alias !!='expand_last'
 
+	# Miscellany
+	alias sql='mariadb -u ssheersh -p'
+	alias code='flatpak run com.vscodium.codium-insiders'
+
 
 end
 

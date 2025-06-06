@@ -43,6 +43,11 @@ alias gl="git log --oneline --graph --decorate"
 alias gd="git diff"
 alias clone="git clone"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Miscellany
+alias sql='mariadb -u root -p'
+
+
 # Expand last command if possible (zsh-style !!)
 alias '!!'='bash -c "$(history -p \!\!)"'
 
