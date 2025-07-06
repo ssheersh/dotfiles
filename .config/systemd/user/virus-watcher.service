@@ -1,0 +1,10 @@
+[Unit]
+Description=ClamAV Virus Watcher for Downloads
+After=default.target
+
+[Service]
+ExecStart=%h/.local/share/scripts/virus-watcher.sh
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

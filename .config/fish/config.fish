@@ -44,7 +44,6 @@ if status is-interactive
 
 	# Miscellany
 	alias sql='mariadb -u ssheersh -p'
-	alias code='flatpak run com.vscodium.codium-insiders'
 
 
 end
@@ -57,6 +56,8 @@ fish_vi_key_bindings
 set -U fish_user_paths /opt/Xilinx/Vivado/2024.2/bin/ $fish_user_paths
 export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
+set -U fish_user_paths $HOME/.config/code-wrapper/bin $fish_user_paths
+set -Ux PATH $HOME/.local/share/scripts/ $PATH
 
 # 🧬 Conda environment hook
 if test -f /home/ssheersh/anaconda3/bin/conda

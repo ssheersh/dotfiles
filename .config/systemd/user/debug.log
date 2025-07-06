@@ -1,0 +1,24 @@
+× virus-watcher.service - ClamAV Virus Watcher for Downloads
+     Loaded: loaded (/home/ssheersh/.config/systemd/user/virus-watcher.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2025-07-04 10:14:14 IST; 45s ago
+   Duration: 23ms
+ Invocation: 7bea395b41024f8682a8a34e821abc86
+    Process: 12875 ExecStart=/home/ssheersh/.local/share/scripts/watch-downloads-for-viruses.sh (code=exited, status=203/EXEC)
+   Main PID: 12875 (code=exited, status=203/EXEC)
+
+Jul 04 10:14:14 ssheersharch systemd[824]: virus-watcher.service: Scheduled restart job, restart counter is at 5.
+Jul 04 10:14:14 ssheersharch systemd[824]: virus-watcher.service: Start request repeated too quickly.
+Jul 04 10:14:14 ssheersharch systemd[824]: virus-watcher.service: Failed with result 'exit-code'.
+Jul 04 10:14:14 ssheersharch systemd[824]: Failed to start ClamAV Virus Watcher for Downloads.
+× virus-watcher.service - ClamAV Virus Watcher for Downloads
+     Loaded: loaded (/home/ssheersh/.config/systemd/user/virus-watcher.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2025-07-04 10:14:14 IST; 1min 42s ago
+   Duration: 23ms
+ Invocation: 7bea395b41024f8682a8a34e821abc86
+    Process: 12875 ExecStart=/home/ssheersh/.local/share/scripts/watch-downloads-for-viruses.sh (code=exited, status=203/EXEC)
+   Main PID: 12875 (code=exited, status=203/EXEC)
+
+Jul 04 10:14:14 ssheersharch systemd[824]: virus-watcher.service: Scheduled restart job, restart counter is at 5.
+Jul 04 10:14:14 ssheersharch systemd[824]: virus-watcher.service: Start request repeated too quickly.
+Jul 04 10:14:14 ssheersharch systemd[824]: virus-watcher.service: Failed with result 'exit-code'.
+Jul 04 10:14:14 ssheersharch systemd[824]: Failed to start ClamAV Virus Watcher for Downloads.

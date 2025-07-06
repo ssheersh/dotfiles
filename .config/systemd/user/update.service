@@ -1,7 +1,0 @@
-
-[Unit]
-Description=Update all system and AUR packages
-
-[Service]
-Type=oneshot
-ExecStart=/home/ssheersh/update.sh
